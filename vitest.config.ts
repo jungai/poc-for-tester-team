@@ -4,5 +4,6 @@ export default defineConfig({
   test: {
     globals: true,
     setupFiles: ["node_modules/dotenv/config"],
+    reporters: "verbose",
   },
 });
