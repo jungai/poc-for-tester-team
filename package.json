@@ -1,0 +1,20 @@
+{
+  "name": "testing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@vitest/ui": "^0.16.0",
+    "dotenv": "^16.0.1",
+    "got": "^12.1.0",
+    "vitest": "^0.16.0"
+  },
+  "scripts": {
+    "docker:down": "docker-compose -f docker-compose.e2e.yaml down",
+    "docker:up": "docker-compose -f docker-compose.e2e.yaml up -d",
+    "setup:docker": "yarn docker:down && yarn docker:up",
+    "db:push": "npx prisma db push",
+    "test": "vitest",
+    "test:ui": "vitest --ui"
+  }
+}
