@@ -5,5 +5,8 @@ export default defineConfig({
     globals: true,
     setupFiles: ["node_modules/dotenv/config"],
     reporters: "verbose",
+    coverage: {
+      reporter: ["text", "html"],
+    },
   },
 });
